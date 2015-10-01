@@ -190,8 +190,7 @@ BrokenList.prototype.getBrokenList = function(){
                   });
 
                   var selectedQuieriesArr = filteredArr.slice(self.initKeyWordI,self.finKeyWordI);
-                
-                 
+
                   return self.querySearch(self.mainDomain, self.finPaginationPage,selectedQuieriesArr);
                 
               });

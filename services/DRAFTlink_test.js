@@ -182,8 +182,9 @@ BrokenList.prototype.getBrokenList = function(){
          console.log(access_token);*/
      // unirest.get('https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A6299600&start-date=30daysAgo&end-date=yesterday&metrics=ga%3Asessions&dimensions=ga%3Akeyword&key='+process.env.GA_KEY+'&access_token='+access_token)
       unirest.get('https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A6299600&start-date=30daysAgo&end-date=yesterday&metrics=ga%3Asessions&dimensions=ga%3Akeyword&key='+process.env.GA_KEY+'&access_token='+process.env.TOKEN)
-              .end(function(response){
-                
+              .end(function(response,err){
+                console.log(err);
+                console.log(response.body.rows);
                 var flatArr= _.flatten(response.body.rows);
                  var filteredArr= _.remove(flatArr,function(val){
                     if(isNaN(val)){
