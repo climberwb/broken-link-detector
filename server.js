@@ -62,7 +62,8 @@ io.on('connection', function (socket) {
         //console.log('socket',socket);
         
        // socket.broadcast.emit('message', message);
-       var modifiedMax = 15+maxQuery;
+       var modifiedMax = 15+Math.floor(maxQuery);
+    
        var report = new brokenList('www.hospitalmedicine.org',pagination,15,modifiedMax,socket);
        report.getBrokenList();
        //link_test.brokenList('www.hospitalmedicine.org',8,4,25);
