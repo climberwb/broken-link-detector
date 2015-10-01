@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <!-- <script src="node_modules/jade/templates.js"></script>-->
+   <script src="/socket.io/socket.io.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="/uploadCSV.js"></script>
+  </head>
+  
+  <body>
+   <center>
+    <form>
+      pagination:<br>
+      <input type="text" name="firstname">
+      <br><br>
+      max query:<br>
+      <input type="text" name="lastname">
+      <br><br>
+       <select name="urls">
+        <option value="www.hospitalmedicine.org">hospitalmedicine.org</option> <!-- TODO replace hard coded values with db-->
+      </select>
+      <br><br>
+       <button type="button">Search Links</button> 
+    </form>
+    </center>
+    <br>
+    <br>
+    <div id="report" style="display:none;  margin:0 auto">
+     <h1>Testing Links...</h1>
+     <h2>This could take a couple minutes</h2>
+     
+     <div style="width:90%;height:500px;line-height:1em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;">
+      <ul class="querySearch" >
+       <li style="float:left">This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large. </li>
+       <li style="float:left">This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large. asdfasdfasdfasdf df asdf asd asdff sdfa d adsf ad adf asdf adsf asdf asdf ddf asdf dfas asdf adf af asdf asdf asdf asdf asdf adf adf </li>
+      </ul>
+     </div>
+    </div>
+  </body>
+
+</div>
+
+    
+</html>
+

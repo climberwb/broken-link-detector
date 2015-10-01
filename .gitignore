@@ -1,0 +1,6 @@
+.env
+key.pem
+node_modules
+token
+public/file.csv
+key.p12
