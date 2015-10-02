@@ -7,8 +7,20 @@ $(document).ready(function() {
     $('button').on('click',function(e){
         e.preventDefault();
         $('#report').css('display','block');
-        var pagination = $('form input')[0].value;
-        var maxQuery = $('form input')[1].value;
+        // Handles large numbers and Not a number
+        var pagination = parseInt($('form input')[0].value);
+        var maxQuery = parseInt($('form input')[1].value);
+        if(maxQuery > 80){
+            maxQuery = 80
+        }else if(isNaN(maxQuery)){
+            maxQuery = 1;
+        }
+        if(pagination > 10){
+            pagination = 10;
+        }else if(isNaN(pagination)){
+            maxQuery = 1;
+        }
+        
         var url = $("form select option:selected" ).text();
         console.log(pagination);
         console.log(maxQuery);
